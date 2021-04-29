@@ -25,6 +25,9 @@ We trained the explainable AI model on CXR (PA view) to predict a probability an
 * NIH     : train_pa_nih.csv
 
 
+![Alt text](./summary_table.png?raw=true "Summary about automatic labels")
+
+
 ## Reference
 [1] Irvin, J., Rajpurkar, P., Ko, M., Yu, Y., Ciurea-Ilcus, S., Chute, C., Marklund, H., Haghgoo, B., Ball, R., Shpanskaya, K. and Seekins, J. Chexpert: A large chest radiograph dataset with uncertainty labels and expert comparison. In Proceedings of the AAAI Conference on Artificial Intelligence 33, 590-597 (2019).
 
