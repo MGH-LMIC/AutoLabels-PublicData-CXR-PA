@@ -10,16 +10,19 @@ Chest radiography (CXR) is one of the most widely used medical imaging modalitie
 We trained the explainable AI model on CXR (PA view) to predict a probability and to estimate the harmonic similarity index (by combining a patch-similarity and a confidence) based on our institution’s train set for each category. The Image-based automatic annotation method consisted of two steps: (1) the explainable AI model and (2) mode selection. The mode selection was developed to mimic the process by which humans (~ AI model) recall and revise their experiences and memories (~ train sets) upon receipt of additional information (~ public dataset); that is, the process by which humans learn. High-quality labels including positive (Pos), negative (Neg), and unlabeled (UL) can be decided systematically and automatically by a single threshold (TH) which can control the tradeoff between label quality and capturing rate.
 
 
-## Lebels
-(Our 5 labels' definition)
+## Lebel Definition
+* [Cardiomegaly] refers to an enlarged heart on chest x-ray, which is described as cardiomegaly and heart/cardiac enlargement.
+* [Atelectasis] is a condition in which the airways and air sacs in the lung collapse or do not expand properly. We only use “atelectasis or atelectatic changes” as the keywords.
+* [Pulmonary edema] is a condition caused by excess fluid in the lung, which is described as “pulmonary edema” and “Kerley B line” at CXR report.
+* [Pneumonia] is an infection of the lungs that may be caused by various pathogen, which is described as “consolidation” and “pneumonia” at CXR report. We excluded indistinctive keywords such as opacity, infiltration, density, etc.  
+* [Pleural effusion] is a buildup of fluid between the layers of tissue that line the lungs and chest cavity. We use “pleural effusion”, “costophrenic angle blunting”, “hemothorax”, “hydropneumothorax” and “empyema” as the keywords. 
 
 
 ## Results
-Insert the final table!
 
-* CheXpert: CSV filename in this repository
-* MIMIC: CSV filename in this repository
-* NIH: CSV filename in this repository
+* CheXpert: train_pa_chexpert.csv
+* MIMIC   : train_pa_mimic.csv
+* NIH     : train_pa_nih.csv
 
 
 ## Reference
