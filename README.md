@@ -3,11 +3,11 @@ Labels (with human experts' quality) for 5 categories on three public CXR datase
 
 
 ## Purpose
-Chest radiography (CXR) is one of the most widely used medical imaging modalities for screening and diagnosis. CheXpert (n=224,316), MIMIC (n=377,110) and NIH (n=108,948) are well-known as large, labeled, public datasets which can help develop deep learning methods to achieve expert-level performance. Unfortunately, because there was no common labeler among institutions, each category can have slightly different definitions among datasets. This can be an important problem in many attempts to develop more generalized AI models by using all datasets. Therefore, we share the large, high-quality labels that contain the same definitions for three public datasets, extracted by our image-based automatic annotation methods.
+CheXpert, MIMIC, and NIH are large open access CXR datasets for widespread AI development. Unfortunately, the accuracy of their provided labels is unknown and may vary between datasets. We built and tested an explainable model for automated CXR annotation which leverages atlas creation/prediction-basis retrieval modules for high-quality labeling at a user selected performance level.
 
 
 ## Method
-We included all frontal chest X-ray images acquired since 2015, yielding 241,723 CXRs. We defined 20 categories for various pathological features and trained the explainable AI models for a posteroanterior (PA) view to predict a probability and to estimate the image-similarity based on our institution’s train set for each category. The Image-based automatic annotation method consisted of two steps: (1) the explainable AI model (Figure-A) and (2) auto-annotation algorithm (Figure-B). The method was mimicked from the human learning process in which they (~ AI model) try to understand new information (~ public dataset) based on their related memories (~ important patches in train sets). High-quality labels including positive (Pos), negative (Neg), and unlabeled (UL) can be decided systematically and automatically by a single threshold (TH) which can control the tradeoff between label quality and capturing rate.
+We developed our model from 241,723 frontal CXR images (2015-2020) trained on 20 features, with 3-6 expert readers as ground truth. The model outputs a probability estimate of input-image similarity for each of 5 pooled-feature categories; cardiomegaly, atelectasis, edema, pneumonia, and pleural effusion. The system, which consists of an explainable AI model (Fig A) and an auto-annotation algorithm (Fig B), mimics human thinking as it associates degree of similarity between novel input-images and its “memory” of stored images (i.e., atlas of important patches from the training sets). We tested model performance for a random subset of images from the public datasets at two different probability thresholds, “TH=0” (nominal similarity but maximal image capture count) and “TH=best” (maximal similarity but lower image capture count), applied to posteroanterior (PA) images in CheXpert (n=224,316), MIMIC (n=377,110), and NIH (n=108,948); majority vote of 7 expert readers was ground truth.
 
 
 ## Lebel Definition
@@ -24,8 +24,11 @@ We included all frontal chest X-ray images acquired since 2015, yielding 241,723
 * MIMIC   : train_pa_mimic.csv
 * NIH     : train_pa_nih.csv
 
-
+[Counts for automatic labels]
 ![Alt text](./summary_table.png?raw=true "Summary about automatic labels")
+
+[Performance for automatic labels]
+![Alt text](./performance_table.png?raw=true "Performance of automatic labels")
 
 
 ## Reference
