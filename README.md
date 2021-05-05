@@ -19,7 +19,7 @@ We developed our model from 241,723 frontal CXR images (2015-2020) trained on 20
 
 
 ## Results
-Sharing automatic labels for three public datasets.
+Sharing automatic labels (at TH=BEST) for three public datasets.
 * Automatic labels for CheXpert: train_pa_chexpert.csv
 * Automatic labels for MIMIC   : train_pa_mimic.csv
 * Automatic labels for NIH     : train_pa_nih.csv
