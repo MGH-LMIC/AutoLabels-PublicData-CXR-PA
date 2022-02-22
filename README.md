@@ -24,7 +24,7 @@ Sharing automatic labels (at TH=BEST [4]) for three public datasets.
 * Automatic labels for MIMIC   : train_pa_mimic_nature.csv
 * Automatic labels for NIH     : train_pa_nih_nature.csv
 
-* Platinum labels for test     : platinum_label_<abnormal feature>.csv
+* Platinum labels for test     : platinum_label_abnormal_feature.csv
 
 Because the shared automatic labels for three public datasets include the 490 samples with platinum labels, you need to exclude them from the automatic labels if you want to use the platinum labels as your testset for developments [4].
 
