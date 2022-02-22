@@ -29,9 +29,11 @@ Sharing automatic labels (at TH=BEST [4]) for three public datasets.
 Because the shared automatic labels for three public datasets include the 490 samples with platinum labels, you need to exclude them from the automatic labels if you want to use the platinum labels as your testset for developments [4].
 
 [Counts for automatic labels]
+  
 ![Alt text](./summary_table.png?raw=true "Summary about automatic labels")
 
-[Performance for automatic labels]
+[Performance for automatic labels, based on the 490 platinum labels]
+  
 ![Alt text](./performance_table.png?raw=true "Performance of automatic labels")
 
 
